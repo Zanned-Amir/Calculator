@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Rubik&family=Rubik+Bubbles&display=swap');
+body{
+    background-color: #A3CEF1;;
+    margin :0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.flex-container{
+    flex: 1;
+    margin-top:130px ;
+    width: 450px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    background-color:#1D3557  ;
+    border-radius: 5px;
+    margin-bottom: 20px;
+ }.board{
+    margin: 10px;
+    margin-bottom:20px;
+    display: flex;
+    flex-direction: column;
+    background-color:#457B9D;
+    justify-content :center;
+    width: 418px;
+    height: 18vh;
+    padding:5px;
+    border-radius: 5px;
+ }
+ .output_1 , .output_2{
+    background-color: #26526d;
+    width: 100%;
+    height: 98vh;
+    margin-top:3px;
+ }
+ .grid-container{
+    display:grid;
+    width: 428px;
+    height: 64vh;
+    margin-left: 16px;
+    background-color:none;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: repeat(5,100px);
+    grid-auto-flow:100px;
+    gap:5px;
+    
+ }
+ .box{
+    display: flex;
+    background-color: #457B9D;
+    margin:2px;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    font-family: "Rubik";
+    color:#a8dadc;
+    border-radius: 5px;
+  }
+  .eqaul{
+    grid-column: 3/5;
+  }
+  .footer {
+    width: 100%;
+    height: 40px;
+    background-color: #26526d;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color:white;
+}
