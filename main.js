@@ -18,10 +18,15 @@ function deleteLast() {
 
 function appendNumber(num) {
     if (operator) {
-        output1 += output2 + " " + operator + " ";
-        output2 = num.toString();
+        if (num === '.' && output2.includes('.')) {
+            return;
+        }
+        output2 += num.toString();
     } else {
-        output2 += num;
+        if (num === '.' && output2.includes('.')) {
+            return;
+        }
+        output2 += num.toString();
     }
     updateOutputs();
 }
@@ -29,10 +34,8 @@ function appendNumber(num) {
 function handleOperator(op) {
     if (output2 !== "") {
         if (operator) {
-            // If there's already an operator, update output1 with the new operator
             output1 = output1.slice(0, -2) + " " + op + " ";
         } else {
-            // If there's no operator, update output1 with the current operator
             output1 += output2 + " " + op + " ";
             output2 = "";
         }
@@ -68,6 +71,6 @@ function calculate() {
 function updateOutputs() {
     document.querySelector('.output_2').innerText = output2;
 
-    let cleanedOutput1 = output1.replace(/(\+|\-|\*|\/)\s*(\+|\-|\*|\/)/g, '$1 ');
+    let cleanedOutput1 = output1.replace(/(\+|\-|\*|\/)\s*(\+|\-|\*|\/)+/g, '$1 ');
     document.querySelector('.output_1').innerText = cleanedOutput1;
 }

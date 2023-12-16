@@ -1,40 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="flex-container">
-        <div class="board">
-            <div class="output_1"></div>
-            <div class="output_2"></div>
+<html lang=!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="board">
+                <div class="output_1"></div>
+                <div class="output_2"></div>
+            </div>
+            <div class="grid-container">
+                <button class="box ac" onclick="clearAll()">AC</button>
+                <button class="box del" onclick="deleteLast()">Del</button>
+                <button class="box percent">%</button>
+                <button class="box add" onclick="handleOperator('+')">+</button>
+                <button class="box one" onclick="appendNumber(1)">1</button>
+                <button class="box two" onclick="appendNumber(2)">2</button>
+                <button class="box three" onclick="appendNumber(3)">3</button>
+                <button class="box multiple" onclick="handleOperator('*')">X</button>
+                <button class="box four" onclick="appendNumber(4)">4</button>
+                <button class="box five" onclick="appendNumber(5)">5</button>
+                <button class="box six" onclick="appendNumber(6)">6</button>
+                <button class="box subdiv" onclick="handleOperator('/')">➗</button>
+                <button class="box seven" onclick="appendNumber(7)">7</button>
+                <button class="box eight" onclick="appendNumber(8)">8</button>
+                <button class="box nine" onclick="appendNumber(9)">9</button>
+                <button class="box substract" onclick="handleOperator('-')">-</button>
+                <button class="box zero" onclick="appendNumber(0)">0</button>
+                <button class="box point" onclick="appendNumber('.')">.</button>
+                <button class="box eqaul" onclick="calculate()">=</button>
+            </div>
         </div>
-        <div class="grid-container">
-            <button class="box ac" onclick="clearAll()">AC</button>
-            <button class="box del" onclick="deleteLast()">Del</button>
-            <button class="box percent">%</button>
-            <button class="box add" onclick="handleOperator('+')">+</button>
-            <button class="box one" onclick="appendNumber(1)">1</button>
-            <button class="box two" onclick="appendNumber(2)">2</button>
-            <button class="box three" onclick="appendNumber(3)">3</button>
-            <button class="box multiple" onclick="handleOperator('*')">X</button>
-            <button class="box four" onclick="appendNumber(4)">4</button>
-            <button class="box five" onclick="appendNumber(5)">5</button>
-            <button class="box six" onclick="appendNumber(6)">6</button>
-            <button class="box subdiv" onclick="handleOperator('/')">➗</button>
-            <button class="box seven" onclick="appendNumber(7)">7</button>
-            <button class="box eight" onclick="appendNumber(8)">8</button>
-            <button class="box nine" onclick="appendNumber(9)">9</button>
-            <button class="box substract" onclick="handleOperator('-')">-</button>
-            <button class="box zero" onclick="appendNumber(0)">0</button>
-            <button class="box point" onclick="appendPoint()">.</button>
-            <button class="box eqaul" onclick="calculate()">=</button>
-        </div>
-    </div>
-    <div class="footer">© Copyright Amir Zanned</div>
-    <script src="main.js"></script>
-</body>
-</html>
+        <div class="footer">© Copyright Amir Zanned</div>
+        <script src="main.js"></script>
+    </body>
+    </html>
