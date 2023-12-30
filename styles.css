@@ -12,7 +12,7 @@ body{
     flex: 1;
     margin-top:50px ;
     width: 450px;
-    height: 650px;
+    height: 750px;
     display: flex;
     flex-direction: column;
     background-color:#1D3557  ;
@@ -81,6 +81,7 @@ body{
     grid-column: 3/5;
   }
   .footer {
+   margin-top: 30px;
     width: 100%;
     height: 40px;
     background-color: #26526d;
